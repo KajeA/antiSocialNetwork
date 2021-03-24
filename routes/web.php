@@ -17,8 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-    Route::get('/posts', 'PostController@store');
+Route::get('/posts', 'PostController@store');
+Route::get('/profiles/{user:name}', 'ProfilesController@show')->name('profile');
 
-    Auth::routes();
+
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

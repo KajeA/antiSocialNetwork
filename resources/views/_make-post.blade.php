@@ -15,6 +15,8 @@
                 src="{{ auth()->user()->avatar }}"
                 alt="your avatar"
                 class="rounded-full mr-2"
+                width="50"
+                height="50"
             >
 
             <button type="submit" class="bg-purple-600 rounded-lg shadow py-1 px-3 text-black">Shitpost</button>
