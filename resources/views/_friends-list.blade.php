@@ -2,7 +2,7 @@
     <h3 class="font-bold text-xl mb-4">Plebs</h3>
 
     <ul>
-        @foreach (auth()->user()->follows as $user)
+        @foreach (current_user()->follows as $user)
             <li class="mb-4">
                 <div class="text-sm">
                     <a href="{{ route('profile', $user) }}" class="flex items-center">

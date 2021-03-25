@@ -15,7 +15,7 @@
             {
 
                 return view('posts.index', [
-                    'posts' => auth()->user()->timeline()
+                    'posts' => current_user()->timeline()
                 ]);
             }
         }

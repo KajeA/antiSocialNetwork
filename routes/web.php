@@ -21,6 +21,7 @@ Route::get('/posts', 'PostController@store');
 Route::get('/profiles/{user:name}', 'ProfilesController@show')->name('profile');
 
 Route::post('/profiles/{user:name}/follow', 'FollowsController@store');
+Route::get('/profiles/{user:name}/edit', 'ProfilesController@edit');
 
 Auth::routes();
 

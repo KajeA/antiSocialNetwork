@@ -6,7 +6,7 @@ namespace App;
 
 trait Followable
 {
-    public function isFollowing(User $user)
+    public function isFollowing(User $user) : bool
     {
         return $this->follows()->where('following_user_id', $user->id)
         ->exists();
@@ -21,4 +21,18 @@ trait Followable
     {
         return $this->follows()->save($user);
     }
+
+    public function unfollow(User $user)
+    {
+        return $this->follows()->detach($user);
+    }
+
+    public function toggleFollow(User $user)
+    {
+        if ($this->isFollowing($user)) {
+            return $this->unfollow($user);
+        }
+        return $this->follow($user);
+    }
+
 }
