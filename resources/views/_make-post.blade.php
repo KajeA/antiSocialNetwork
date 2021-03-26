@@ -19,7 +19,7 @@
                 height="50"
             >
 
-            <button type="submit" class="bg-purple-600 rounded-lg shadow py-1 px-3 text-black">Shitpost</button>
+            <button type="submit" class="bg-purple-600 hover:bg-pink-300 rounded-lg shadow py-0.5 px-6 text-white">Shitpost</button>
 
         </footer>
     </form>

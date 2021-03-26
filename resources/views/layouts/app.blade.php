@@ -33,7 +33,7 @@
             <main class="container mx-auto">
                 <div class="lg:flex">
                     @if (auth()->check())
-                        <div class="lg:w-1/6">
+                        <div class="lg:w-1/6 p-2">
                             @include ('_sidebar-links')
                         </div>
                     @endif
@@ -43,7 +43,7 @@
                     </div>
 
                     @if (auth()->check())
-                        <div class="lg:w-1/6">
+                        <div class="lg:w-1/6 p-2">
                             @include ('_friends-list')
                         </div>
                         @endif

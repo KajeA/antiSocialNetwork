@@ -23,6 +23,9 @@ Route::get('/profiles/{user:name}', 'ProfilesController@show')->name('profile');
 Route::post('/profiles/{user:name}/follow', 'FollowsController@store');
 Route::get('/profiles/{user:name}/edit', 'ProfilesController@edit');
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/explore', 'ExploreController@index');

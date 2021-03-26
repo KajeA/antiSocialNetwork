@@ -20,5 +20,14 @@
         <p class="text-sm">
             {{ $post->body }}
         </p>
+
+        <div>
+            <div class="flex items-center pt-3">
+                <img src="{{ asset('images/dislike.png') }}" alt="dislike" class="w-6 pr-1">
+                <span class="text-xs text-gray-400">
+                    {{ $post->likes }}
+                </span>
+            </div>
+        </div>
     </div>
 </div>
