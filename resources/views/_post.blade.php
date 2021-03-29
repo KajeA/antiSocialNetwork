@@ -21,13 +21,19 @@
             {{ $post->body }}
         </p>
 
-        <div>
-            <div class="flex items-center pt-3">
-                <img src="{{ asset('images/dislike.png') }}" alt="dislike" class="w-6 pr-1">
-                <span class="text-xs text-gray-400">
-                    {{ $post->likes }}
-                </span>
-            </div>
+        <div class="flex">
+            <form method="POST"w
+                action="/posts/{{ $post->id }}/like">
+
+                <div>
+                    <button type="submit" class="flex items-center pt-3">
+                        <img src="{{ asset('images/dislike.png') }}" alt="dislike" class="w-6 pr-1">
+                        <span class="text-xs text-gray-400">
+                            {{ $post->likes ?: 0 }}
+                        </span>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

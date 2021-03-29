@@ -13,7 +13,6 @@
 
             public function index()
             {
-
                 return view('posts.index', [
                     'posts' => current_user()->timeline()
                 ]);

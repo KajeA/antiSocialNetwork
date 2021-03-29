@@ -22,6 +22,7 @@ Route::get('/profiles/{user:name}', 'ProfilesController@show')->name('profile');
 
 Route::post('/profiles/{user:name}/follow', 'FollowsController@store');
 Route::get('/profiles/{user:name}/edit', 'ProfilesController@edit');
+Route::post('posts/{post}/like', 'PostLikesController@store');
 
 
 
